@@ -1,0 +1,85 @@
+version: '3'
+services:
+
+  #PHP Service
+  appnews:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # image: digitalocean.com/php
+    container_name: appnews
+    restart: unless-stopped
+    tty: false
+    environment:
+      SERVICE_NAME: appnews
+      SERVICE_TAGS: dev
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+      - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - news-app-network
+
+  #Nginx Service
+  newswebserver:
+    image: nginx:alpine
+    container_name: news
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "$APP_PORT:80"
+    volumes:
+      - ./:/var/www
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+    networks:
+      - news-app-network
+
+  #MySQL Service
+  dbnews:
+    image: mysql:5.7.22
+    container_name: dbnews
+    restart: unless-stopped
+    tty: false
+    ports:
+      - "$FORWARD_DB_PORT:3306"
+    environment:
+      MYSQL_DATABASE: news_db
+      MYSQL_ROOT_PASSWORD: root
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - dbdata:/var/lib/mysql/
+      - ./mysql/my.cnf:/etc/mysql/my.cnf
+    networks:
+      - news-app-network
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadminnews
+    restart: always
+    networks:
+      - news-app-network
+    depends_on:
+      - dbnews
+    environment:
+      PMA_HOST: dbnews
+      PMA_USER: root
+      PMA_PASSWORD: root
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    ports:
+      - "$PHPMYADMIN_FWD_PORT:80"
+  mailhognews:
+    networks:
+      - news-app-network
+    image: mailhog/mailhog
+    ports:
+      - '$MAIL_FWD_PORT:1025' # smtp server
+      - '$MAIL_UI_FWD_PORT:8025' # web ui
+#Docker Networks
+networks:
+  news-app-network:
+    driver: bridge
+#Volumes
+volumes:
+  dbdata:
+    driver: local

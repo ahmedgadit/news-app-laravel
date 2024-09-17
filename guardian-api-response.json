@@ -1,0 +1,145 @@
+// the gaurdian api response
+{
+  "response": {
+    "status": "ok",
+    "userTier": "developer",
+    "total": 2526977,
+    "startIndex": 1,
+    "pageSize": 10,
+    "currentPage": 1,
+    "pages": 252698,
+    "orderBy": "newest",
+    "results": [
+      {
+        "id": "sport/live/2024/sep/15/solheim-cup-2024-final-day-singles-live",
+        "type": "liveblog",
+        "sectionId": "sport",
+        "sectionName": "Sport",
+        "webPublicationDate": "2024-09-15T16:03:52Z",
+        "webTitle": "Solheim Cup 2024: final-day singles – live",
+        "webUrl": "https://www.theguardian.com/sport/live/2024/sep/15/solheim-cup-2024-final-day-singles-live",
+        "apiUrl": "https://content.guardianapis.com/sport/live/2024/sep/15/solheim-cup-2024-final-day-singles-live",
+        "isHosted": false,
+        "pillarId": "pillar/sport",
+        "pillarName": "Sport"
+      },
+      {
+        "id": "football/live/2024/sep/15/wolves-v-newcastle-premier-league-live",
+        "type": "liveblog",
+        "sectionId": "football",
+        "sectionName": "Football",
+        "webPublicationDate": "2024-09-15T16:02:02Z",
+        "webTitle": "Wolves v Newcastle: Premier League – live",
+        "webUrl": "https://www.theguardian.com/football/live/2024/sep/15/wolves-v-newcastle-premier-league-live",
+        "apiUrl": "https://content.guardianapis.com/football/live/2024/sep/15/wolves-v-newcastle-premier-league-live",
+        "isHosted": false,
+        "pillarId": "pillar/sport",
+        "pillarName": "Sport"
+      },
+      {
+        "id": "sport/live/2024/sep/15/england-v-australia-third-mens-t20-cricket-international-live",
+        "type": "liveblog",
+        "sectionId": "sport",
+        "sectionName": "Sport",
+        "webPublicationDate": "2024-09-15T15:46:08Z",
+        "webTitle": "England v Australia: third men’s T20 cricket international abandoned due to rain – as it happened",
+        "webUrl": "https://www.theguardian.com/sport/live/2024/sep/15/england-v-australia-third-mens-t20-cricket-international-live",
+        "apiUrl": "https://content.guardianapis.com/sport/live/2024/sep/15/england-v-australia-third-mens-t20-cricket-international-live",
+        "isHosted": false,
+        "pillarId": "pillar/sport",
+        "pillarName": "Sport"
+      },
+      {
+        "id": "world/2024/sep/15/women-attack-uk-decision-to-halt-harvey-weinstein-charges",
+        "type": "article",
+        "sectionId": "world",
+        "sectionName": "World news",
+        "webPublicationDate": "2024-09-15T15:44:54Z",
+        "webTitle": "Women ‘disheartened’ by UK decision to halt Harvey Weinstein charges",
+        "webUrl": "https://www.theguardian.com/world/2024/sep/15/women-attack-uk-decision-to-halt-harvey-weinstein-charges",
+        "apiUrl": "https://content.guardianapis.com/world/2024/sep/15/women-attack-uk-decision-to-halt-harvey-weinstein-charges",
+        "isHosted": false,
+        "pillarId": "pillar/news",
+        "pillarName": "News"
+      },
+      {
+        "id": "books/2024/sep/15/my-good-bright-wolf-a-memoir-by-sarah-moss-review-anorexia-eating-disorder-mental-health",
+        "type": "article",
+        "sectionId": "books",
+        "sectionName": "Books",
+        "webPublicationDate": "2024-09-15T15:30:02Z",
+        "webTitle": "My Good Bright Wolf: A Memoir by Sarah Moss review – an interrogation of an eating disorder",
+        "webUrl": "https://www.theguardian.com/books/2024/sep/15/my-good-bright-wolf-a-memoir-by-sarah-moss-review-anorexia-eating-disorder-mental-health",
+        "apiUrl": "https://content.guardianapis.com/books/2024/sep/15/my-good-bright-wolf-a-memoir-by-sarah-moss-review-anorexia-eating-disorder-mental-health",
+        "isHosted": false,
+        "pillarId": "pillar/arts",
+        "pillarName": "Arts"
+      },
+      {
+        "id": "football/live/2024/sep/15/tottenham-v-arsenal-north-london-derby-premier-league-live",
+        "type": "liveblog",
+        "sectionId": "football",
+        "sectionName": "Football",
+        "webPublicationDate": "2024-09-15T15:22:00Z",
+        "webTitle": "Tottenham 0-1 Arsenal: north London derby, Premier League – as it happened",
+        "webUrl": "https://www.theguardian.com/football/live/2024/sep/15/tottenham-v-arsenal-north-london-derby-premier-league-live",
+        "apiUrl": "https://content.guardianapis.com/football/live/2024/sep/15/tottenham-v-arsenal-north-london-derby-premier-league-live",
+        "isHosted": false,
+        "pillarId": "pillar/sport",
+        "pillarName": "Sport"
+      },
+      {
+        "id": "football/2024/sep/15/tottenham-arsenal-premier-league-match-report",
+        "type": "article",
+        "sectionId": "football",
+        "sectionName": "Football",
+        "webPublicationDate": "2024-09-15T15:16:45Z",
+        "webTitle": "Gabriel’s towering header secures derby win for depleted Arsenal at Tottenham",
+        "webUrl": "https://www.theguardian.com/football/2024/sep/15/tottenham-arsenal-premier-league-match-report",
+        "apiUrl": "https://content.guardianapis.com/football/2024/sep/15/tottenham-arsenal-premier-league-match-report",
+        "isHosted": false,
+        "pillarId": "pillar/sport",
+        "pillarName": "Sport"
+      },
+      {
+        "id": "music/2024/sep/15/last-night-of-the-proms-review-royal-albert-hall-london",
+        "type": "article",
+        "sectionId": "music",
+        "sectionName": "Music",
+        "webPublicationDate": "2024-09-15T15:05:31Z",
+        "webTitle": "Last Night of the Proms review – pauses stretched patience but warmth and a Mexican wave won out ",
+        "webUrl": "https://www.theguardian.com/music/2024/sep/15/last-night-of-the-proms-review-royal-albert-hall-london",
+        "apiUrl": "https://content.guardianapis.com/music/2024/sep/15/last-night-of-the-proms-review-royal-albert-hall-london",
+        "isHosted": false,
+        "pillarId": "pillar/arts",
+        "pillarName": "Arts"
+      },
+      {
+        "id": "world/live/2024/sep/15/middle-east-crisis-live-un-worker-killed-by-israeli-sniper-in-west-bank-israel-reports-missile-from-yemen",
+        "type": "liveblog",
+        "sectionId": "world",
+        "sectionName": "World news",
+        "webPublicationDate": "2024-09-15T15:00:07Z",
+        "webTitle": "Middle East crisis: Netanyahu says Israel will ‘exact heavy price’ for Houthi attack – as it happened",
+        "webUrl": "https://www.theguardian.com/world/live/2024/sep/15/middle-east-crisis-live-un-worker-killed-by-israeli-sniper-in-west-bank-israel-reports-missile-from-yemen",
+        "apiUrl": "https://content.guardianapis.com/world/live/2024/sep/15/middle-east-crisis-live-un-worker-killed-by-israeli-sniper-in-west-bank-israel-reports-missile-from-yemen",
+        "isHosted": false,
+        "pillarId": "pillar/news",
+        "pillarName": "News"
+      },
+      {
+        "id": "australia-news/2024/sep/16/zero-repercussions-victims-of-robodebt-embarrassed-to-have-believed-justice-would-be-done",
+        "type": "article",
+        "sectionId": "australia-news",
+        "sectionName": "Australia news",
+        "webPublicationDate": "2024-09-15T15:00:05Z",
+        "webTitle": "‘Zero repercussions’: victims of robodebt ‘embarrassed’ to have believed justice would be done",
+        "webUrl": "https://www.theguardian.com/australia-news/2024/sep/16/zero-repercussions-victims-of-robodebt-embarrassed-to-have-believed-justice-would-be-done",
+        "apiUrl": "https://content.guardianapis.com/australia-news/2024/sep/16/zero-repercussions-victims-of-robodebt-embarrassed-to-have-believed-justice-would-be-done",
+        "isHosted": false,
+        "pillarId": "pillar/news",
+        "pillarName": "News"
+      }
+    ]
+  }
+}

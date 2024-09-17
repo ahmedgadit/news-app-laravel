@@ -1,0 +1,59 @@
+// ny times api format
+{
+    "section": "dining",
+    "subsection": "",
+    "title": "La Grenouille, Vestige of New York’s Old-School French Dining, Will Close",
+    "abstract": "Six decades after its birth as an elegant refuge for Manhattan’s elite, the Midtown restaurant says ‘adieu’ this week.",
+    "url": "https://www.nytimes.com/2024/09/12/dining/la-grenouille-closing-nyc.html",
+    "uri": "nyt://article/3d462631-dbd6-5f2e-9921-addf59e276df",
+    "byline": "By Pete Wells",
+    "item_type": "Article",
+    "updated_date": "2024-09-12T21:54:55-04:00",
+    "created_date": "2024-09-12T15:36:27-04:00",
+    "published_date": "2024-09-12T15:36:27-04:00",
+    "material_type_facet": "",
+    "kicker": "",
+    "des_facet": [
+    "French Food (Cuisine)"
+    ],
+    "org_facet": [
+    "La Grenouille (Manhattan, NY, Restaurant)"
+    ],
+    "per_facet": [],
+    "geo_facet": [
+    "New York City"
+    ],
+    "multimedia": [
+        {
+            "url": "https://static01.nyt.com/images/2024/09/12/multimedia/12la-grenouille1-pqvk/12la-grenouille1-pqvk-superJumbo.jpg",
+            "format": "Super Jumbo",
+            "height": 1365,
+            "width": 2048,
+            "type": "image",
+            "subtype": "photo",
+            "caption": "Soft light, towering flowers and time-honored French dishes were part of La Grenouille’s appeal for the wealthy and well-connected.",
+            "copyright": "Lanna Apisukh for The New York Times"
+        },
+        {
+            "url": "https://static01.nyt.com/images/2024/09/12/multimedia/12la-grenouille1-pqvk/12la-grenouille1-pqvk-threeByTwoSmallAt2X.jpg",
+            "format": "threeByTwoSmallAt2X",
+            "height": 400,
+            "width": 600,
+            "type": "image",
+            "subtype": "photo",
+            "caption": "Soft light, towering flowers and time-honored French dishes were part of La Grenouille’s appeal for the wealthy and well-connected.",
+            "copyright": "Lanna Apisukh for The New York Times"
+        },
+        {
+            "url": "https://static01.nyt.com/images/2024/09/12/multimedia/12la-grenouille1-pqvk/12la-grenouille1-pqvk-thumbLarge.jpg",
+            "format": "Large Thumbnail",
+            "height": 150,
+            "width": 150,
+            "type": "image",
+            "subtype": "photo",
+            "caption": "Soft light, towering flowers and time-honored French dishes were part of La Grenouille’s appeal for the wealthy and well-connected.",
+            "copyright": "Lanna Apisukh for The New York Times"
+        }
+    ],
+    "short_url": ""
+},

@@ -1,0 +1,14 @@
+// news api format
+{#5106
+  +"source": {#5128
+    +"id": "associated-press",
+    +"name": "Associated Press",
+  },
+  +"author": "DAVID KOENIG, MANUEL VALDES, LINDSEY WASSON",
+  +"title": "Striking Boeing factory workers say they are ready to hold out for a better contract - The Associated Press",
+  +"description": "Blue-collar workers from Boeing are walking picket lines in the Pacific Northwest instead of building airplanes after overwhelmingly rejecting a proposed contract that would have raised their wages by 25% over four years. The strike by 33,000 machinists that <E2><80><A6>",
+  +"url": "https://apnews.com/article/boeing-strike-machinists-contract-9f61a7d48675d1c3517233d40d4ec2b1",
+  +"urlToImage": "https://dims.apnews.com/dims4/default/af0f6b0/2147483647/strip/true/crop/5309x2986+0+276/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fb5%2F00%2F8f47b13e697e05d6446b3df9bd39%2F5870f21523ab4e83bd5b061e2880594f",
+  +"publishedAt": "2024-09-14T18:17:00Z",
+  +"content": "SEATTLE (AP) Blue-collar workers from Boeing walked picket lines in the Pacific Northwest instead of building airplanes on Friday after they overwhelmingly rejected a proposed contract that would hav<E2><80><A6> [+7725 chars]",
+},

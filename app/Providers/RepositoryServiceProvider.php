@@ -1,0 +1,40 @@
+<?php
+
+namespace App\Providers;
+
+use App\Repositories\CategoryRepository;
+use App\Repositories\Interfaces\CategoryInterface;
+use App\Repositories\Interfaces\SourceInterface;
+use App\Repositories\SourceRepository;
+use Illuminate\Support\ServiceProvider;
+use PHPUnit\TextUI\Configuration\Source;
+
+class RepositoryServiceProvider extends ServiceProvider
+{
+    /**
+     * Register services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $managers = [
+            CategoryInterface::class => CategoryRepository::class,
+            SourceInterface::class => SourceRepository::class,
+        ];
+
+        foreach ($managers as $interface => $implementation) {
+            $this->app->bind($interface, $implementation);
+        }
+    }
+
+    /**
+     * Bootstrap services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        //
+    }
+}

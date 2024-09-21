@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Enums\SourceEnum;
 use App\Models\Sources;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -15,17 +16,17 @@ class SourcesSeeder extends Seeder
     {
         $sources = [
             [
-                'name' => 'The Guardian News',
-                'source_uuid' => 'guardian-news',
+                'name' => SourceEnum::GuardianNews,
+                'source_uuid' => SourceEnum::GuardianUUID,
             ],
             [
-                'name' => 'New York Times',
-                'source_uuid' => 'new-york-times',
+                'name' => SourceEnum::NewYourTimes,
+                'source_uuid' => SourceEnum::NewYorkTimesUUID,
             ]
         ];
 
         foreach ($sources as $source) {
-            Sources::createOrUpdate(['source_uuid' => $source['source_uuid']],$source);
+            Sources::updateOrCreate(['source_uuid' => $source['source_uuid']],$source);
         }
     }
 }

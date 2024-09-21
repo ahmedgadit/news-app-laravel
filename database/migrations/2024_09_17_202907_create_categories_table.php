@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name', 100);
             $table->string('display_name', 100)->nullable();
+            $table->string('apiUrl', 255)->nullable();
+            $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });
     }

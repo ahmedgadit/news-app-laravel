@@ -19,6 +19,9 @@ class Guardian {
 
     }
 
+    /**
+     * This function use to get tags from guardian api
+     */
     public function getCategories()
     {
         return $this->guardianClient->sections()

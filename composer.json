@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "bensampo/laravel-enum": "^6.11",
         "inertiajs/inertia-laravel": "^1.0",
         "jcobhams/newsapi": "dev-hotfix/payload-variable",
         "laravel/framework": "^11.9",

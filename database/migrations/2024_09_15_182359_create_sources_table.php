@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name', 100);
             $table->string('source_uuid');
             $table->text('description')->nullable();
-            $table->link('url')->nullable();
+            $table->string('url')->nullable();
             $table->string('category')->nullable();
             $table->string('language')->nullable();
             $table->string('country')->nullable();

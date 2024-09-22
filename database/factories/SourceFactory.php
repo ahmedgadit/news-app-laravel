@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Sources>
  */
-class SourcesFactory extends Factory
+class SourceFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
@@ -16,7 +16,7 @@ class SourcesFactory extends Factory
      * @var string
      */
     protected $model = Sources::class;
-    
+
     /**
      * Define the model's default state.
      *

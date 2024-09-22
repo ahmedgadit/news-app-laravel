@@ -7,7 +7,7 @@ use App\Models\Sources;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class SourcesSeeder extends Seeder
+class SourceSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -26,7 +26,7 @@ class SourcesSeeder extends Seeder
         ];
 
         foreach ($sources as $source) {
-            Sources::updateOrCreate(['source_uuid' => $source['source_uuid']],$source);
+            Sources::updateOrCreate(['source_uuid' => $source['source_uuid']], $source);
         }
     }
 }

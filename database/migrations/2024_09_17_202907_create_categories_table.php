@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('display_name', 100)->nullable();
             $table->string('apiUrl', 255)->nullable();
             $table->tinyInteger('status')->default(1);
+            $table->unsignedBigInteger('parent_id', 255)->nullable();
+            $table->foreign('parent_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }

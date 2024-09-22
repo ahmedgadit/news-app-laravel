@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Repositories\ArticleRepository;
 use App\Repositories\CategoryRepository;
+use App\Repositories\Interfaces\ArticleInterface;
 use App\Repositories\Interfaces\CategoryInterface;
 use App\Repositories\Interfaces\SourceInterface;
 use App\Repositories\SourceRepository;
@@ -21,6 +23,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $managers = [
             CategoryInterface::class => CategoryRepository::class,
             SourceInterface::class => SourceRepository::class,
+            ArticleInterface::class => ArticleRepository::class,
         ];
 
         foreach ($managers as $interface => $implementation) {

@@ -2,12 +2,15 @@
 
 namespace App\Console\Commands;
 
+use App\Enums\SourceEnum;
 use App\Repositories\CategoryRepository;
 use App\Repositories\SourceRepository;
 use App\Services\Guardian;
-use App\Services\News;
+use App\Services\NewsOrg;
 use App\Services\NyTimes;
+use Carbon\Carbon;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 class SetupNewsData extends Command
@@ -49,7 +52,7 @@ class SetupNewsData extends Command
     public function addSources() 
     {
         try {
-            $news = new News();
+            $news = new NewsOrg();
             $sources = $news->getSources();
             foreach ($sources as $source) {
                 $sourceData = [
@@ -113,18 +116,102 @@ class SetupNewsData extends Command
     public function addNews() 
     {
         try {
-            $guardian = new Guardian();
-            $guardianResp = $guardian->getNewsByDate();
+            $allNews = [];
 
-            $nyTimes = new NyTimes();
-            $nyTimesResp = $nyTimes->getAll();
+            // // Fetch news from Guardian
+            // $this->info('Fetching news from Guardian...');
+            // $guardian = new Guardian();
+            // $currentMonthFirstDate = Carbon::now()->firstOfMonth()->format('d/m/Y');
+            // $pageSize = 100;
+            // $page = 1;
+            // $totalPages = 380;
+            // $guardianProgressBar = $this->output->createProgressBar($totalPages);
 
-            dd($nyTimesResp);
+            // do {
+            //     $guardianResp = $guardian->getNewsByDate($currentMonthFirstDate, $pageSize, $page);
+            //     $results = $guardianResp;
 
-            return $nyTimesResp;
+            //     // Process or store the results as needed
+            //     $allNews = array_merge($allNews, $results);
+
+            //     $page++;
+            //     $guardianProgressBar->advance();
+            // } while ($page <= $totalPages);
+
+            // $guardianProgressBar->finish();
+            // $this->info("\nGuardian news fetched successfully.");
+
+            // Fetch news from New York Times
+            // $this->info('Fetching news from New York Times...');
+            // $nyTimes = new NyTimes();
+            // $limit = 500;
+            // $offset = 0;
+            // $totalNyTimesPages = 1; // Assuming 1 page for simplicity, adjust as needed
+            // $nyTimesProgressBar = $this->output->createProgressBar($totalNyTimesPages);
+
+            // do {
+            //     $nyTimesResp = $nyTimes->getAll($limit, $offset);
+            //     $results = $nyTimesResp;
+
+            //     // Process or store the results as needed
+            //     $allNews = array_merge($allNews, $results);
+
+            //     $offset += $limit;
+            //     $nyTimesProgressBar->advance();
+            // } while (count($results) > 0 && $offset <= 500);
+
+            // $nyTimesProgressBar->finish();
+            // $this->info("\nNew York Times news fetched successfully.");
+
+            // Fetch top headlines from NewsOrg
+            $this->info('Fetching top headlines from NewsOrg...');
+            $newsOrg = new NewsOrg();
+            $newsOrgResp = $newsOrg->getTopHeadlines();
+            dd($newsOrgResp);
+            $allNews = array_merge($allNews, $newsOrgResp);
+            $this->info("NewsOrg headlines fetched successfully.");
+
+            // Insert news into articles table
+            $this->info('Inserting news into articles table...');
+            $this->insertArticles($allNews);
+            $this->info('News data has been successfully fetched and stored.');
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             throw $th;
         }
+    }
+
+
+    /**
+     * Insert articles into the database.
+     *
+     * @param array $articles
+     * @return void
+     */
+    private function insertArticles(array $articles)
+    {
+        $progressBar = $this->output->createProgressBar(count($articles));
+
+        foreach ($articles as $article) {
+            if(isset($article->api_url)) {
+                $sourceRepository = new SourceRepository();
+                $source = $sourceRepository->getByColumn('source_uuid', SourceEnum::GuardianUUID);
+                $article->source_id = $source->id;
+            }
+            DB::table('articles')->updateOrCreate([],[
+                'source' => $article['source'] ?? null,
+                'author' => $article['author'] ?? null,
+                'title' => $article['title'] ?? null,
+                'description' => $article['description'] ?? null,
+                'url' => $article['url'] ?? null,
+                'image_url' => $article['image_url'] ?? null,
+                'published_date' => $article['published_date'] ?? null,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]);
+            $progressBar->advance();
+        }
+
+        $progressBar->finish();
     }
 }

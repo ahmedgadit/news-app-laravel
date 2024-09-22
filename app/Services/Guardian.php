@@ -6,10 +6,29 @@ use Guardian\GuardianAPI;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Http;
 
-class Guardian
+class Guardian extends Platforms
 {
 
     private $guardianClient;
+    protected $keys = [
+        'source_uuid',
+        'category',
+        'author',
+        'title',
+        'url',
+        'api_url',
+        'type',
+        'published_date',
+    ];
+    protected $mapKeys = [
+        'id' => 'source_uuid',
+        'webTitle' => 'title',
+        'sectionName' => 'category',
+        'type' => 'type',
+        'webUrl' => 'url',
+        'apiUrl' => 'api_url',
+        'webPublicationDate' => 'published_date',
+    ];
 
     public function __construct()
     {
@@ -30,13 +49,15 @@ class Guardian
     /**
      * This function use to get tags from guardian api
      */
-    public function getNewsByDate($fromDate = '1/08/2024')
+    public function getNewsByDate($fromDate = '1/09/2024', $pageSize = 20, $page = 1)
     {
         $response = $this->guardianClient->content()
             ->setFromDate(new \DateTimeImmutable($fromDate))
             ->setToDate(new \DateTimeImmutable())
+            ->setPageSize($pageSize)
+            ->setPage($page)
             ->fetch();
-
-        return $response;
+        // dd($response);
+        return $this->createResponse($response->response->results);
     }
 }

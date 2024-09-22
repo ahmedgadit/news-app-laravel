@@ -32,8 +32,9 @@ class SetupNewsData extends Command
     public function handle()
     {
         try {
-            $this->addSources();
-            $this->addCategories();
+            // $this->addSources();
+            // $this->addCategories();
+            $this->addNews();
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             throw $th;
@@ -84,22 +85,43 @@ class SetupNewsData extends Command
         try {
             $nyTimes = new NyTimes();
             $nyCats = $nyTimes->getCategories();
-            $nyCats = json_decode($nyCats, true);
 
             $guardian = new Guardian();
             $gCats = $guardian->getCategories();
             $result = $gCats->response->results;
-            $categories = [...$nyCats['results'], ...$result];
+            $categories = [...$nyCats, ...$result];
             foreach ($categories as $category) {
+                $checkIsObject = !is_object($category);
+                $catName = $checkIsObject ? $category['section'] : $category->id;
+                $catDisplayName = $checkIsObject ? $category['webTitle'] : $category->webTitle;
+                $apiUrl = $checkIsObject ? $category->apiUrl :null;
                 $categoryData = [
-                    'name' => $category['section'] ?? $category['id'],
-                    'display_name' => $category['display_name'] ?? $category['webTitle'],
-                    'apiUrl' => $category['apiUrl'] ?? null,
+                    'name' => $catName,
+                    'display_name' => $catDisplayName,
+                    'apiUrl' => $category->apiUrl ?? null,
                     'status' => 1,
                 ];
                 $categoryRepository = new CategoryRepository();
-                $categoryRepository->createOrUpdate(['name' => $categoryData['name'], 'apiUrl'=> $categoryData['apiUrl']], $categoryData);
+                $categoryRepository->createOrUpdate(['name' => $catName, 'apiUrl'=> $apiUrl], $categoryData);
             }
+        } catch (\Throwable $th) {
+            Log::error($th->getMessage());
+            throw $th;
+        }
+    }
+
+    public function addNews() 
+    {
+        try {
+            $guardian = new Guardian();
+            $guardianResp = $guardian->getNewsByDate();
+
+            $nyTimes = new NyTimes();
+            $nyTimesResp = $nyTimes->getAll();
+
+            dd($nyTimesResp);
+
+            return $nyTimesResp;
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             throw $th;

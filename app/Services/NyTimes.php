@@ -23,7 +23,7 @@ class NyTimes {
         $response = $this->nyTimeClient->get($url);
 
         if ($response->successful()) {
-            return $response->body();
+            return $this->createResponse($response->body());
         } else {
             return $response->status();
         }
@@ -36,9 +36,14 @@ class NyTimes {
         $response = $this->nyTimeClient->get($url);
 
         if ($response->successful()) {
-            return $response->body();
+            return $this->createResponse($response->body());
         } else {
             return $response->status();
         }
+    }
+
+    private function createResponse($response) {
+        $nyTimeResponse = json_decode($response, true);
+        return $nyTimeResponse;
     }
 }

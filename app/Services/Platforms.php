@@ -56,8 +56,11 @@ class Platforms
         if (is_array($data)) {
             $result = [];
             foreach ($data as $key => $value) {
-                if (in_array($key, $keys) || is_numeric($key)) {
+                if (in_array($key, $keys)) {
                     $result[$key] = is_array($value) || is_object($value) ? $this->filterKeys($value, $keys) : $value;
+                }
+                if(is_numeric($key)) {
+                    $result[] = is_array($value) || is_object($value) ? $this->filterKeys($value, $keys) : $value;
                 }
             }
             return $result;

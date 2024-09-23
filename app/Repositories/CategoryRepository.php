@@ -6,7 +6,7 @@ use App\Models\Category;
 use App\Repositories\Interfaces\CategoryInterface;
 
 /**
- * Class PageRepository.
+ * Class CategoryRepository.
  */
 class CategoryRepository extends BaseRepository implements CategoryInterface
 {

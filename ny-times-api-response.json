@@ -1,59 +1,122 @@
 // ny times api format
 {
-    "section": "dining",
-    "subsection": "",
-    "title": "La Grenouille, Vestige of New York’s Old-School French Dining, Will Close",
-    "abstract": "Six decades after its birth as an elegant refuge for Manhattan’s elite, the Midtown restaurant says ‘adieu’ this week.",
-    "url": "https://www.nytimes.com/2024/09/12/dining/la-grenouille-closing-nyc.html",
-    "uri": "nyt://article/3d462631-dbd6-5f2e-9921-addf59e276df",
-    "byline": "By Pete Wells",
-    "item_type": "Article",
-    "updated_date": "2024-09-12T21:54:55-04:00",
-    "created_date": "2024-09-12T15:36:27-04:00",
-    "published_date": "2024-09-12T15:36:27-04:00",
-    "material_type_facet": "",
-    "kicker": "",
-    "des_facet": [
-    "French Food (Cuisine)"
-    ],
-    "org_facet": [
-    "La Grenouille (Manhattan, NY, Restaurant)"
-    ],
-    "per_facet": [],
-    "geo_facet": [
-    "New York City"
-    ],
-    "multimedia": [
-        {
-            "url": "https://static01.nyt.com/images/2024/09/12/multimedia/12la-grenouille1-pqvk/12la-grenouille1-pqvk-superJumbo.jpg",
-            "format": "Super Jumbo",
-            "height": 1365,
-            "width": 2048,
-            "type": "image",
-            "subtype": "photo",
-            "caption": "Soft light, towering flowers and time-honored French dishes were part of La Grenouille’s appeal for the wealthy and well-connected.",
-            "copyright": "Lanna Apisukh for The New York Times"
-        },
-        {
-            "url": "https://static01.nyt.com/images/2024/09/12/multimedia/12la-grenouille1-pqvk/12la-grenouille1-pqvk-threeByTwoSmallAt2X.jpg",
-            "format": "threeByTwoSmallAt2X",
-            "height": 400,
-            "width": 600,
-            "type": "image",
-            "subtype": "photo",
-            "caption": "Soft light, towering flowers and time-honored French dishes were part of La Grenouille’s appeal for the wealthy and well-connected.",
-            "copyright": "Lanna Apisukh for The New York Times"
-        },
-        {
-            "url": "https://static01.nyt.com/images/2024/09/12/multimedia/12la-grenouille1-pqvk/12la-grenouille1-pqvk-thumbLarge.jpg",
-            "format": "Large Thumbnail",
-            "height": 150,
-            "width": 150,
-            "type": "image",
-            "subtype": "photo",
-            "caption": "Soft light, towering flowers and time-honored French dishes were part of La Grenouille’s appeal for the wealthy and well-connected.",
-            "copyright": "Lanna Apisukh for The New York Times"
-        }
-    ],
-    "short_url": ""
+    "slug_name" => "22indiegame-reviews-ES"
+    "section" => "En español"
+    "subsection" => "Cultura"
+    "title" => "‘UFO 50’ evoca los videojuegos del pasado con ingenio renovado"
+    "abstract" => "Esta recopilación de videojuegos de una compañía ficticia de la década de 1980 es constantemente novedosa. En contraste, “Yars Rising”, el esfuerzo de Atari por resucitar uno de sus títulos, es tan banal que resulta frustrante."
+    "uri" => "nyt://article/83ebc32a-0c0d-5749-9c46-8519da8b2106"
+    "url" => "https://www.nytimes.com/es/2024/09/22/espanol/cultura/ufo-50-yars-rising-resena.html"
+    "byline" => "By Harold Goldberg"
+    "item_type" => "Article"
+    "source" => "New York Times"
+    "updated_date" => "2024-09-22T05:01:56-04:00"
+    "created_date" => "2024-09-22T05:01:56-04:00"
+    "published_date" => "2024-09-22T05:01:56-04:00"
+    "first_published_date" => "2024-09-22T05:01:56-04:00"
+    "material_type_facet" => "News"
+    "kicker" => "Reseñas de videojuegos"
+    "subheadline" => ""
+    "des_facet" => array:1 [
+    0 => "Computer and Video Games"
+    ]
+    "org_facet" => array:1 [
+    0 => "Atari"
+    ]
+    "per_facet" => []
+    "geo_facet" => []
+    "related_urls" => []
+    "multimedia" => array:4 [
+        0 => array:8 [
+            "url" => "https://static01.nyt.com/images/2024/09/17/multimedia/17ESPindiegame-reviews-thjv/17indiegame-reviews-thjv-thumbStandard.jpg"
+            "format" => "Standard Thumbnail"
+            "height" => 75
+            "width" => 75
+            "type" => "image"
+            "subtype" => "photo"
+            "caption" => "Los gráficos de UFO 50 son decididamente retro y los artistas han hecho un trabajo admirable con los escasos 32 colores a su disposición."
+            "copyright" => "Mossmouth"
+        ]
+        1 => array:8 [
+            "url" => "https://static01.nyt.com/images/2024/09/17/multimedia/17ESPindiegame-reviews-thjv/17indiegame-reviews-thjv-mediumThreeByTwo210.jpg"
+            "format" => "mediumThreeByTwo210"
+            "height" => 140
+            "width" => 210
+            "type" => "image"
+            "subtype" => "photo"
+            "caption" => "Los gráficos de UFO 50 son decididamente retro y los artistas han hecho un trabajo admirable con los escasos 32 colores a su disposición."
+            "copyright" => "Mossmouth"
+        ]
+        2 => array:8 [
+            "url" => "https://static01.nyt.com/images/2024/09/17/multimedia/17ESPindiegame-reviews-thjv/17indiegame-reviews-thjv-mediumThreeByTwo440.jpg"
+            "format" => "mediumThreeByTwo440"
+            "height" => 293
+            "width" => 440
+            "type" => "image"
+            "subtype" => "photo"
+            "caption" => "Los gráficos de UFO 50 son decididamente retro y los artistas han hecho un trabajo admirable con los escasos 32 colores a su disposición."
+            "copyright" => "Mossmouth"
+        ]
+        3 => array:8 [
+            "url" => "https://static01.nyt.com/images/2024/09/17/multimedia/17ESPindiegame-reviews-thjv/17indiegame-reviews-thjv-articleInline.jpg"
+            "format" => "Normal"
+            "height" => 107
+            "width" => 190
+            "type" => "image"
+            "subtype" => "photo"
+            "caption" => "Los gráficos de UFO 50 son decididamente retro y los artistas han hecho un trabajo admirable con los escasos 32 colores a su disposición."
+            "copyright" => "Mossmouth"
+        ]
+    ]
 },
+
+
+
+
+
+
+
+guardian
++"source_uuid": "business/2024/sep/22/labour-should-ditch-doom-and-gloom-message-for-one-of-economic-renewal"
++"type": "article"
++"category": "Business"
++"published_date": "2024-09-22T10:29:22Z"
++"title": "Labour should ditch doom and gloom message for one of economic renewal | Richard Partington"
++"url": "https://www.theguardian.com/business/2024/sep/22/labour-should-ditch-doom-and-gloom-message-for-one-of-economic-renewal"
++"api_url": "https://content.guardianapis.com/business/2024/sep/22/labour-should-ditch-doom-and-gloom-message-for-one-of-economic-renewal"
+
+
+ny times
+"source_uuid" => "21routine-gina-torres"
+"category" => "New York"
+"sub_category" => ""
+"title" => "How Gina Torres, of ‘Suits’ and ‘9-1-1: Lonestar,’ Spends Her Sundays"
+"description" => "Ms. Torres starts with a low-key workout, takes a dance break and ends the day with one of her favorite murder-filled TV shows."
+"uri" => "nyt://article/4b56c0d0-e512-5572-89c0-ae14636cdff1"
+"url" => "https://www.nytimes.com/2024/09/21/nyregion/gina-torres-suits-911-lone-star.html"
+"author" => "By Ilana Kaplan"
+"type" => "Article"
+"source" => "New York Times"
+"updated_date" => "2024-09-21T03:00:14-04:00"
+"created_date" => "2024-09-21T03:00:14-04:00"
+"published_date" => "2024-09-21T03:00:14-04:00"
+"sub_title" => ""
+"multimedia" []
+
+
+
+news org
++"source": {#825
++"id": null
++"name": "9to5Mac"
+}
++"author": "Chance Miller"
++"title": "First iPhone 16 Pro durability tests show downside to new ultra-thin bezels - 9to5Mac"
++"short_description": "The iPhone 16 and iPhone 16 Pro are here, and so are the first durability tests. If you want to..."
++"url": "https://9to5mac.com/2024/09/20/first-iphone-16-durability-tests/"
++"image_url": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2024/09/iphone-16-drop-test-.jpeg?resize=1200%2C628&quality=82&strip=all&ssl=1"
++"published_date": "2024-09-20T21:40:00Z"
++"description": """
+Screenshot\r\n
+The iPhone 16 and iPhone 16 Pro are here, and so are the first durability tests. If you want to watch Apples latest flagship phones go through drop tests, knife tests, and more, head belo… [+1717 chars]
+"""

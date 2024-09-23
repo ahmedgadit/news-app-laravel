@@ -10,4 +10,10 @@ class Source extends Model
     use HasFactory;
     protected $fillable = [];
     protected $guarded = [];
+
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

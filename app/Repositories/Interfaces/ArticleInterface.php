@@ -3,7 +3,7 @@
 namespace App\Repositories\Interfaces;
 
 /**
- * Interface SourceInterface .
+ * Interface ArticleInterface .
  */
 interface ArticleInterface extends BaseInterface
 {

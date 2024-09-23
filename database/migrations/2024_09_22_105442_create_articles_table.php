@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('title', 255);
             $table->string('sub_title', 255)->nullable();
-            $table->string('source_uuid');
+            $table->text('article_uuid');
             $table->text('description')->nullable();
             $table->text('short_description')->nullable();
-            $table->string('url')->nullable();
-            $table->string('api_url')->nullable();
+            $table->text('url')->nullable();
+            $table->text('api_url')->nullable();
             $table->string('category')->nullable();
             $table->string('sub_category')->nullable();
             $table->string('language')->nullable();
@@ -28,7 +28,7 @@ return new class extends Migration
             $table->string('author')->nullable();
             $table->string('source')->nullable();
             $table->string('uri')->nullable();
-            $table->string('image_url')->nullable();
+            $table->text('image_url')->nullable();
             $table->string('published_date')->nullable();
             $table->string('created_date')->nullable();
             $table->string('updated_date')->nullable();

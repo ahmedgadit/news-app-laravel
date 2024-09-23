@@ -3,7 +3,7 @@
 namespace App\Repositories\Interfaces;
 
 /**
- * Interface SourceInterface .
+ * Interface CategoryInterface .
  */
 interface CategoryInterface extends BaseInterface
 {

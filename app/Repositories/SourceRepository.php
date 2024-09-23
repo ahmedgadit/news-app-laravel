@@ -2,11 +2,11 @@
 
 namespace App\Repositories;
 
-use App\Models\Sources;
+use App\Models\Source;
 use App\Repositories\Interfaces\SourceInterface;
 
 /**
- * Class PageRepository.
+ * Class SourceRepository.
  */
 class SourceRepository extends BaseRepository implements SourceInterface
 {
@@ -16,6 +16,6 @@ class SourceRepository extends BaseRepository implements SourceInterface
      */
     public function model()
     {
-        return Sources::class;
+        return Source::class;
     }
 }

@@ -2,21 +2,21 @@
 
 namespace Database\Factories;
 
-use App\Models\Source;
+use App\Models\Platform;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Source>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Platform>
  */
-class SourceFactory extends Factory
+class PlatformFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Source::class;
-
+    protected $model = Platform::class;
+    
     /**
      * Define the model's default state.
      *
@@ -26,9 +26,7 @@ class SourceFactory extends Factory
     {
         return [
             'name' => $this->faker->name,
-            'source_uuid' => $this->faker->numerify('##########'),
-            'description' => $this->faker->text,
-            'status' => 1,
+            'platform_uuid' => $this->faker->numerify('##########'),
         ];
     }
 }

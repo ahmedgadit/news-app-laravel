@@ -9,7 +9,7 @@ class NyTimes extends Platforms {
     private $nyTimeClient;
     private $ignoreSources = ['admin', 'en espa<C3><B1>ol', 'home page', 'today<E2><80><99>s paper'];
     protected $keys = [
-        'source_uuid',
+        'article_uuid',
         'source',
         'category',
         'sub_category',
@@ -21,6 +21,7 @@ class NyTimes extends Platforms {
         'uri',
         'type',
         'multimedia',
+        'image_payload',
         'width',
         'height',
         'sub_title',
@@ -30,12 +31,13 @@ class NyTimes extends Platforms {
     ];
    
     protected $mapKeys = [
-        'slug_name' => 'source_uuid',
+        'slug_name' => 'article_uuid',
         'title' => 'title',
         'subheadline' => 'sub_title',
         'abstract' => 'description',
         'section' => 'category',
         'subsection' => 'sub_category',
+        'multimedia' => 'image_payload',
         'language' => 'language',
         'item_type' => 'type',
         'byline' => 'author',

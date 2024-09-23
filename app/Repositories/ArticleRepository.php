@@ -6,7 +6,7 @@ use App\Models\Article;
 use App\Repositories\Interfaces\ArticleInterface;
 
 /**
- * Class PageRepository.
+ * Class ArticleRepository.
  */
 class ArticleRepository extends BaseRepository implements ArticleInterface
 {

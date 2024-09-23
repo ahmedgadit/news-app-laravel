@@ -11,7 +11,7 @@ class Guardian extends Platforms
 
     private $guardianClient;
     protected $keys = [
-        'source_uuid',
+        'article_uuid',
         'category',
         'author',
         'title',
@@ -21,7 +21,7 @@ class Guardian extends Platforms
         'published_date',
     ];
     protected $mapKeys = [
-        'id' => 'source_uuid',
+        'id' => 'article_uuid',
         'webTitle' => 'title',
         'sectionName' => 'category',
         'type' => 'type',

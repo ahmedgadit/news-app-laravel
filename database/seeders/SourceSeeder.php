@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use App\Enums\SourceEnum;
-use App\Models\Sources;
+use App\Models\Source;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -26,7 +26,7 @@ class SourceSeeder extends Seeder
         ];
 
         foreach ($sources as $source) {
-            Sources::updateOrCreate(['source_uuid' => $source['source_uuid']], $source);
+            Source::updateOrCreate(['source_uuid' => $source['source_uuid']], $source);
         }
     }
 }

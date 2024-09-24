@@ -5,15 +5,24 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
 use App\Models\Category;
+use App\Repositories\CategoryRepository;
 
 class CategoryController extends Controller
 {
+    private $repository;
+
+    public function __construct(CategoryRepository $categoryRepository)
+    {
+        $this->repository = $categoryRepository;
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $categories = $this->repository->all();
+        $userCategories = auth()->user()->categories;
+        return response()->json(['categories' => $categories, 'userCategories' => $userCategories]);
     }
 
     /**
@@ -29,7 +38,11 @@ class CategoryController extends Controller
      */
     public function store(StoreCategoryRequest $request)
     {
-        //
+        info("Request: ");
+        info($request->all());
+        $request->all();
+        $user = auth()->user();
+        $user->categories()->sync($request->categories);
     }
 
     /**

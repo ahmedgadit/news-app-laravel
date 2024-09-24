@@ -5,15 +5,24 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreSourceRequest;
 use App\Http\Requests\UpdateSourceRequest;
 use App\Models\Source;
+use App\Repositories\SourceRepository;
 
 class SourceController extends Controller
 {
+    private $repository;
+
+    public function __construct(SourceRepository $sourceRepository) 
+    {
+        $this->repository = $sourceRepository;
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $sources = $this->repository->all();
+        $userSources = auth()->user()->sources;
+        return response()->json(['sources' => $sources, 'userSources' => $userSources]);
     }
 
     /**
@@ -29,7 +38,11 @@ class SourceController extends Controller
      */
     public function store(StoreSourceRequest $request)
     {
-        //
+        info("Request: ");
+        info($request->all());
+        $request->all();
+        $user = auth()->user();
+        $user->sources()->sync($request->sources);
     }
 
     /**

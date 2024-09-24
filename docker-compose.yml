@@ -75,6 +75,25 @@ services:
     ports:
       - '$MAIL_FWD_PORT:1025' # smtp server
       - '$MAIL_UI_FWD_PORT:8025' # web ui
+
+  # Next.js Frontend Service
+  frontend:
+    build:
+      context: ./Frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ./Frontend:/app
+    working_dir: /app
+    command: npm run dev
+    networks:
+      - news-app-network
 #Docker Networks
 networks:
   news-app-network:

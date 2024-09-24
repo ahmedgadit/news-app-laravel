@@ -4,6 +4,8 @@
 /public/build
 /public/hot
 /public/storage
+/Frontend/node_modules
+/Frontend/.next
 /storage/*.key
 /vendor
 .env

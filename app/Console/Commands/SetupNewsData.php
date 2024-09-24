@@ -139,27 +139,27 @@ class SetupNewsData extends Command
             $allNews = [];
 
             // Fetch news from Guardian
-            // $this->info('Fetching news from Guardian...');
-            // $guardian = new Guardian();
-            // $currentMonthFirstDate = Carbon::now()->firstOfMonth()->format('d/m/Y');
-            // $pageSize = 100;
-            // $page = 1;
-            // $totalPages = 380;
-            // $guardianProgressBar = $this->output->createProgressBar($totalPages);
+            $this->info('Fetching news from Guardian...');
+            $guardian = new Guardian();
+            $currentMonthFirstDate = Carbon::now()->firstOfMonth()->format('d/m/Y');
+            $pageSize = 100;
+            $page = 1;
+            $totalPages = 380;
+            $guardianProgressBar = $this->output->createProgressBar($totalPages);
 
-            // do {
-            //     $guardianResp = $guardian->getNewsByDate($currentMonthFirstDate, $pageSize, $page);
-            //     $results = $guardianResp;
+            do {
+                $guardianResp = $guardian->getNewsByDate($currentMonthFirstDate, $pageSize, $page);
+                $results = $guardianResp;
 
-            //     // Process or store the results as needed
-            //     $allNews = array_merge($allNews, $results);
+                // Process or store the results as needed
+                $allNews = array_merge($allNews, $results);
 
-            //     $page++;
-            //     $guardianProgressBar->advance();
-            // } while ($page <= $totalPages);
+                $page++;
+                $guardianProgressBar->advance();
+            } while ($page <= $totalPages);
 
-            // $guardianProgressBar->finish();
-            // $this->info("\nGuardian news fetched successfully.");
+            $guardianProgressBar->finish();
+            $this->info("\nGuardian news fetched successfully.");
 
             // Fetch news from New York Times
             $this->info('Fetching news from New York Times...');
